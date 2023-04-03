@@ -39,22 +39,14 @@
                 <param name="android-package" value="org.apache.cordova.camera.CameraLauncher"/>
             </feature>
         </config-file>
-	<edit-config file="app/src/main/AndroidManifest.xml" mode="merge" target="/manifest">
+	<config-file target="AndroidManifest.xml" parent="/*">
 	    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-            <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-            <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-            <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-            <uses-permission android:name="android.permission.ACCESS_MEDIA_LOCATION" />
-            <uses-permission android:name="android.permission.CAMERA" />
-	</edit-config>
-        <!--config-file target="AndroidManifest.xml" parent="/*">
-            <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-            <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-            <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-            <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-            <uses-permission android:name="android.permission.ACCESS_MEDIA_LOCATION" />
-            <uses-permission android:name="android.permission.CAMERA" />
-        </config-file-->
+		<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+		<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+		<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+		<uses-permission android:name="android.permission.ACCESS_MEDIA_LOCATION" />
+		<uses-permission android:name="android.permission.CAMERA" />
+	</config-file>
 		
 		<config-file target="AndroidManifest.xml" parent="application">
 	          <provider
